@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import { countUp } from "../redux/repos/count-repo";
 import { MyClass } from "lib-util/my-class";
+import { anotherFunction } from "lib-util/my-exported-function";
 
 class BaseView extends React.Component {
     static propTypes = {
@@ -11,17 +12,14 @@ class BaseView extends React.Component {
         myClass: PropTypes.object.isRequired,
     };
 
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
     callMyClass() {
         // IDEA 2017.2 EAP can't find/navigate to myFunction
         this.props.myClass.myFunction();
     }
 
     render() {
+        anotherFunction();
+
         return (
             <div>
                 <div>
