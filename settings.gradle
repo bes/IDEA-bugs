@@ -1,0 +1,3 @@
+rootProject.name = "IDEA-bugs"
+
+include 'app'

@@ -1,0 +1,16 @@
+# Gradle
+build/
+.gradle
+.gradletasknamecache
+
+# IDEA
+.idea/**
+!.idea/codeStyleSettings.xml
+!.idea/copyright/
+!.idea/copyright/**
+*.iml
+
+.DS_Store
+
+node_modules
+npm-debug.log

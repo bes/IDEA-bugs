@@ -1,0 +1,18 @@
+apply plugin: 'base'
+apply plugin: "com.moowork.node"
+
+node {
+    version = "8.1.2"
+    yarnVersion = "0.24.6"
+    download = true
+    nodeModulesDir = file("${project.rootProject.projectDir}")
+    workDir = file("${project.buildDir}/nodejs")
+    yarnWorkDir = file("${project.buildDir}/yarn")
+}
+
+dependencies {
+}
+
+task webpack(type: YarnTask, dependsOn: yarn_install)  {
+    args = ['run', 'build']
+}

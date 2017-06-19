@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        jcenter()
+
+        maven {
+            // Required for gradle-node-plugin
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.moowork.gradle:gradle-node-plugin:1.0.1"
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "4.0"
+    distributionType = Wrapper.DistributionType.ALL
+}
