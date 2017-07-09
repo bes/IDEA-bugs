@@ -1,3 +1,4 @@
 rootProject.name = "IDEA-bugs"
 
 include 'app'
+include 'lib-util'
